@@ -1,10 +1,12 @@
 import {Routes, Route, Link} from "react-router-dom";
 import styled from "styled-components";
+
 import GalleryPage from './pages/GalleryPage';
 import ServicesPage from './pages/ServicesPage';
-import NailGallery from './components/Gallery';
+import BookingPage from './pages/BookingPage';
+import PaymentPage from './pages/PaymentPage';
+
 import "react-image-gallery/styles/css/image-gallery.css";
-import { PageContainer, NailGalleryContainer, NailGalleryHeader } from './styled';
 import './App.css'
 
 const NavBar = styled.nav`
@@ -22,11 +24,15 @@ function App() {
       <NavBar>
         <Link to="/">Gallery</Link>
         <Link to= "/services"> Services</Link>
+        <Link to= "/booking"> Booking</Link>
+        <Link to= "/payment"> Payment</Link>
         </NavBar>
       
       <Routes>
         <Route path="/" element={<GalleryPage/>} />
         <Route path="/services" element={<ServicesPage/>} />
+        <Route path="/booking" element={<BookingPage/>}/>
+        <Route path="/payment" element={<PaymentPage/>} />
       </Routes>
 
     </>
